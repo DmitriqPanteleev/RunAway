@@ -18,6 +18,7 @@
 		D07ADDD32C28A6B60002B79B /* GeneralMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07ADDD22C28A6B60002B79B /* GeneralMenuViewController.swift */; };
 		D07ADDD82C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07ADDD72C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift */; };
 		D07ADDDA2C28AC470002B79B /* GeneralMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07ADDD92C28AC470002B79B /* GeneralMenuButtonView.swift */; };
+		D07ADDDC2C28BF1A0002B79B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07ADDDB2C28BF1A0002B79B /* Colors.swift */; };
 		D0D1CD7C2C1DB50D00A21FF2 /* GeneralMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1CD7B2C1DB50D00A21FF2 /* GeneralMapView.swift */; };
 		D0D1CD7E2C1DB59C00A21FF2 /* UserAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1CD7D2C1DB59C00A21FF2 /* UserAnnotationView.swift */; };
 		D0D1CD872C1DB85000A21FF2 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1CD862C1DB85000A21FF2 /* GeneralViewController.swift */; };
@@ -39,6 +40,7 @@
 		D07ADDD22C28A6B60002B79B /* GeneralMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMenuViewController.swift; sourceTree = "<group>"; };
 		D07ADDD72C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
 		D07ADDD92C28AC470002B79B /* GeneralMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMenuButtonView.swift; sourceTree = "<group>"; };
+		D07ADDDB2C28BF1A0002B79B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D0D1CD6E2C1DB1A100A21FF2 /* away.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = away.entitlements; sourceTree = "<group>"; };
 		D0D1CD7B2C1DB50D00A21FF2 /* GeneralMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMapView.swift; sourceTree = "<group>"; };
 		D0D1CD7D2C1DB59C00A21FF2 /* UserAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotationView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				D02C884E2C1DAF8100682DA9 /* Assets.xcassets */,
 				D02C88502C1DAF8100682DA9 /* LaunchScreen.storyboard */,
+				D07ADDDB2C28BF1A0002B79B /* Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				D0D1CD732C1DB25300A21FF2 /* General */,
-				D0D1CD752C1DB26100A21FF2 /* Training */,
 				D0D1CD762C1DB27100A21FF2 /* Profile */,
 			);
 			path = Modules;
@@ -195,13 +197,6 @@
 				D0D1CD8F2C1F0E9400A21FF2 /* Annotations */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		D0D1CD752C1DB26100A21FF2 /* Training */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Training;
 			sourceTree = "<group>";
 		};
 		D0D1CD762C1DB27100A21FF2 /* Profile */ = {
@@ -322,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07ADDD32C28A6B60002B79B /* GeneralMenuViewController.swift in Sources */,
+				D07ADDDC2C28BF1A0002B79B /* Colors.swift in Sources */,
 				D04362812C288791005EFE6E /* Away+NotificationCenter.swift in Sources */,
 				D0D1CD872C1DB85000A21FF2 /* GeneralViewController.swift in Sources */,
 				D04362882C289C89005EFE6E /* UIViewController+Extensions.swift in Sources */,
