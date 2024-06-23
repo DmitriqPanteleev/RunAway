@@ -10,7 +10,7 @@ import CoreLocation
 
 protocol Locatable {
     var currentCoordinate: CLLocationCoordinate2D? { get }
-    var delegate: LocationManagerDelegate? { get set }
+    var delegate: LocatableDelegate? { get set }
     
     func change(mode: LocationManager.Mode)
 }

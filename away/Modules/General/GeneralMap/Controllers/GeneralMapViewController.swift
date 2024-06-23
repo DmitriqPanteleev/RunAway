@@ -1,30 +1,33 @@
 //
-//  GeneralViewController.swift
+//  GeneralMapViewController.swift
 //  away
 //
-//  Created by Дмитрий Пантелеев on 15.06.2024.
+//  Created by Дмитрий Пантелеев on 23.06.2024.
 //
 
 import UIKit
+import MapKit
 import CoreLocation
 
-final class GeneralMapViewController: UIViewController {
-    // MARK: Views
-    lazy var mapView: GeneralMapRepresentable & GeneralMapControlable = GeneralMapView()
+class GeneralMapViewController: UIViewController {
     
     // MARK: Dependencies
     private var locationManager: Locatable = LocationManager()
     
-    // MARK: Lifecycle
+    // MARK: Views
+    private lazy var mapView: GeneralMapRepresentable & GeneralMapControlable = GeneralMapView()
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDelegates()
+        
+        mapView.delegate = self
+        locationManager.delegate = self
+        
         setupViews()
-        setupObervers()
     }
 }
 
-// MARK: - UI
 private extension GeneralMapViewController {
     func setupViews() {
         view.addSubview(mapView)
@@ -38,10 +41,6 @@ private extension GeneralMapViewController {
         mapView.configure()
     }
     
-    func setupDelegates() {
-        locationManager.delegate = self
-    }
-    
     func setupObervers() {
         when(.appWillEnterForeground) { [weak self] _ in
             guard let coordinate = self?.locationManager.currentCoordinate else { return }
@@ -53,7 +52,15 @@ private extension GeneralMapViewController {
 // MARK: - LocationManagerDelegate Conformance
 extension GeneralMapViewController: LocatableDelegate {
     func manager(didUpdate location: CLLocation) {
-        print("didUpdate \(location)")
         mapView.navigate(to: location.coordinate, animated: true)
     }
 }
+
+// MARK: - MKMapViewDelegate Conformance
+extension GeneralMapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let userAnnotation = annotation as? UserAnnotation else { return nil }
+        return UserAnnotationView(annotation: userAnnotation, reuseIdentifier: "userAnnotation")
+    }
+}
+

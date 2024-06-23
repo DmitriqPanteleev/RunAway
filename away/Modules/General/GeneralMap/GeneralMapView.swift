@@ -9,6 +9,8 @@ import Foundation
 import MapKit
 
 protocol GeneralMapRepresentable: UIView {
+    var delegate: MKMapViewDelegate? { get set }
+    
     func configure()
     func set(type: MKMapType)
     func set(mode: MKUserTrackingMode, animated: Bool)
@@ -33,7 +35,6 @@ final class GeneralMapView: MKMapView {
 // MARK: - Setters
 extension GeneralMapView: GeneralMapRepresentable {
     func configure() {
-        delegate = self
         mapType = .standard
         
         showsScale = false
@@ -49,6 +50,10 @@ extension GeneralMapView: GeneralMapRepresentable {
     
     func set(mode: MKUserTrackingMode, animated: Bool = true) {
         setUserTrackingMode(mode, animated: animated)
+    }
+    
+    func setDelegate(_ delegate: MKMapViewDelegate) {
+        self.delegate = delegate
     }
 }
 
@@ -68,10 +73,4 @@ extension GeneralMapView: GeneralMapControlable {
     }
 }
 
-// MARK: - MKMapViewDelegate
-extension GeneralMapView: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let userAnnotation = annotation as? UserAnnotation else { return nil }
-        return UserAnnotationView(annotation: userAnnotation, reuseIdentifier: "userAnnotation")
-    }
-}
+
