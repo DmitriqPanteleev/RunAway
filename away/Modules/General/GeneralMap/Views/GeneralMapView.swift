@@ -8,6 +8,7 @@
 import Foundation
 import MapKit
 
+// MARK: - Protocols
 protocol GeneralMapRepresentable: UIView {
     var delegate: MKMapViewDelegate? { get set }
     
@@ -20,6 +21,8 @@ protocol GeneralMapControlable {
     func navigate(to coordinate: CLLocationCoordinate2D, animated: Bool)
 }
 
+
+// MARK: - View
 final class GeneralMapView: MKMapView {
     private var annotation: UserAnnotation?
     
@@ -62,8 +65,10 @@ extension GeneralMapView: GeneralMapControlable {
     func navigate(to coordinate: CLLocationCoordinate2D, animated: Bool) {
         defer { setCenter(coordinate, animated: animated) }
         
-        if let _annotation = annotation {
-            _annotation.coordinate = coordinate
+        if let _annotation = annotation, _annotation.coordinate != coordinate {
+            UIView.animate(withDuration: 0.3) {
+                _annotation.coordinate = coordinate
+            }
         } else {
             annotation = UserAnnotation(coordinate: coordinate)
             addAnnotation(annotation!)

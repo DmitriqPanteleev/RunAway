@@ -78,7 +78,6 @@ extension LocationManager {
 // MARK: - Delegate Conformance
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("HUETA | \(locations.first?.coordinate)")
         let sortedLocations = locations.sorted { $0.horizontalAccuracy < $1.horizontalAccuracy }
         guard let bestLocation = sortedLocations.first else { return }
         currentCoordinate = bestLocation.coordinate

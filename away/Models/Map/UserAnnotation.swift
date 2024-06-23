@@ -9,9 +9,11 @@ import Foundation
 import MapKit
 
 final class UserAnnotation: NSObject, MKAnnotation {
-    var coordinate: CLLocationCoordinate2D
+    var isActive: Bool
+    dynamic var coordinate: CLLocationCoordinate2D
     
-    init(coordinate: CLLocationCoordinate2D) {
+    init(isActive: Bool = false, coordinate: CLLocationCoordinate2D) {
+        self.isActive = isActive
         self.coordinate = coordinate
     }
 }

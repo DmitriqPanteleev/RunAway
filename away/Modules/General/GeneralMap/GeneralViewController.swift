@@ -29,5 +29,15 @@ private extension GeneralViewController {
             mapController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             mapController.view.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         }
+        
+        let menuController = GeneralMenuViewController()
+        setupChildViewController(menuController) {
+            menuController.view.translatesAutoresizingMaskIntoConstraints = false
+            
+            menuController.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            menuController.view.heightAnchor.constraint(equalToConstant: 54).isActive = true
+            menuController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+            menuController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        }
     }
 }

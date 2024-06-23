@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class GeneralMapViewController: UIViewController {
+final class GeneralMapViewController: UIViewController {
     
     // MARK: Dependencies
     private var locationManager: Locatable = LocationManager()

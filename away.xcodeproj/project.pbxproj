@@ -15,6 +15,9 @@
 		D04362842C288818005EFE6E /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04362832C288818005EFE6E /* Typealiases.swift */; };
 		D04362882C289C89005EFE6E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04362872C289C89005EFE6E /* UIViewController+Extensions.swift */; };
 		D043628B2C28A0CE005EFE6E /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043628A2C28A0CE005EFE6E /* GeneralMapViewController.swift */; };
+		D07ADDD32C28A6B60002B79B /* GeneralMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07ADDD22C28A6B60002B79B /* GeneralMenuViewController.swift */; };
+		D07ADDD82C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07ADDD72C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift */; };
+		D07ADDDA2C28AC470002B79B /* GeneralMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07ADDD92C28AC470002B79B /* GeneralMenuButtonView.swift */; };
 		D0D1CD7C2C1DB50D00A21FF2 /* GeneralMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1CD7B2C1DB50D00A21FF2 /* GeneralMapView.swift */; };
 		D0D1CD7E2C1DB59C00A21FF2 /* UserAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1CD7D2C1DB59C00A21FF2 /* UserAnnotationView.swift */; };
 		D0D1CD872C1DB85000A21FF2 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1CD862C1DB85000A21FF2 /* GeneralViewController.swift */; };
@@ -33,6 +36,9 @@
 		D04362832C288818005EFE6E /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		D04362872C289C89005EFE6E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D043628A2C28A0CE005EFE6E /* GeneralMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
+		D07ADDD22C28A6B60002B79B /* GeneralMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMenuViewController.swift; sourceTree = "<group>"; };
+		D07ADDD72C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
+		D07ADDD92C28AC470002B79B /* GeneralMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMenuButtonView.swift; sourceTree = "<group>"; };
 		D0D1CD6E2C1DB1A100A21FF2 /* away.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = away.entitlements; sourceTree = "<group>"; };
 		D0D1CD7B2C1DB50D00A21FF2 /* GeneralMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMapView.swift; sourceTree = "<group>"; };
 		D0D1CD7D2C1DB59C00A21FF2 /* UserAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotationView.swift; sourceTree = "<group>"; };
@@ -104,8 +110,8 @@
 		D04362852C289A72005EFE6E /* GeneralMap */ = {
 			isa = PBXGroup;
 			children = (
+				D07ADDD42C28A6DD0002B79B /* Views */,
 				D04362892C28A0BB005EFE6E /* Controllers */,
-				D0D1CD7B2C1DB50D00A21FF2 /* GeneralMapView.swift */,
 				D0D1CD862C1DB85000A21FF2 /* GeneralViewController.swift */,
 			);
 			path = GeneralMap;
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D04362872C289C89005EFE6E /* UIViewController+Extensions.swift */,
+				D07ADDD72C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,8 +130,18 @@
 			isa = PBXGroup;
 			children = (
 				D043628A2C28A0CE005EFE6E /* GeneralMapViewController.swift */,
+				D07ADDD22C28A6B60002B79B /* GeneralMenuViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D07ADDD42C28A6DD0002B79B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1CD7B2C1DB50D00A21FF2 /* GeneralMapView.swift */,
+				D07ADDD92C28AC470002B79B /* GeneralMenuButtonView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D0D1CD6F2C1DB1BD00A21FF2 /* App */ = {
@@ -304,14 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07ADDD32C28A6B60002B79B /* GeneralMenuViewController.swift in Sources */,
 				D04362812C288791005EFE6E /* Away+NotificationCenter.swift in Sources */,
 				D0D1CD872C1DB85000A21FF2 /* GeneralViewController.swift in Sources */,
 				D04362882C289C89005EFE6E /* UIViewController+Extensions.swift in Sources */,
 				D0D1CD7E2C1DB59C00A21FF2 /* UserAnnotationView.swift in Sources */,
 				D0D1CD7C2C1DB50D00A21FF2 /* GeneralMapView.swift in Sources */,
 				D0D1CD8B2C1DBE3F00A21FF2 /* LocationManager.swift in Sources */,
+				D07ADDD82C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 				D04362842C288818005EFE6E /* Typealiases.swift in Sources */,
 				D02C88462C1DAF7F00682DA9 /* AppDelegate.swift in Sources */,
+				D07ADDDA2C28AC470002B79B /* GeneralMenuButtonView.swift in Sources */,
 				D02C88482C1DAF7F00682DA9 /* SceneDelegate.swift in Sources */,
 				D043628B2C28A0CE005EFE6E /* GeneralMapViewController.swift in Sources */,
 				D0D1CD912C1F0EFF00A21FF2 /* UserAnnotation.swift in Sources */,

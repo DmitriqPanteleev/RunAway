@@ -8,5 +8,6 @@
 import Foundation
 
 // MARK: - Function aliases
+typealias VoidAction = () -> ()
 typealias Closure = () -> ()
 typealias NotificationClosure = (Notification) -> ()
