@@ -21,19 +21,23 @@ protocol LocatableDelegate: AnyObject {
 
 final class LocationManager: NSObject, Locatable {
     
-    // MARK: Private fields
-    private var manager = CLLocationManager()
+    // MARK: Internal properties
     private var mode: Mode = .waiting
+    private var manager = CLLocationManager()
     
-    // MARK: Public fields
-    private(set) var currentCoordinate: CLLocationCoordinate2D?
+    // MARK: External properties
+    let logger: Recordable
     weak var delegate: LocatableDelegate?
+    private(set) var currentCoordinate: CLLocationCoordinate2D?
     
     // MARK: Init
-    override init() {
+    init(logger: Recordable) {
+        self.logger = logger
+        
         super.init()
-        setupManager()
+        
         requestAuth()
+        setupManager()
     }
 }
 
@@ -85,7 +89,7 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("LOCATION MANAGER FAILS") // TODO: - logger
+        logger.log(error: error)
     }
 }
 

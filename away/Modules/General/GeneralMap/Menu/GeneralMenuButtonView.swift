@@ -41,8 +41,8 @@ class GeneralMenuButtonView: UIButton {
         super.touchesCancelled(touches, with: event)
     }
         
-    func configure(title: String) {
-        setTitle(title, for: .normal)
+    func configure(title: Strings) {
+        setTitle(title.l(), for: .normal)
         setTitleColor(.black, for: .normal)
         
         backgroundColor = .white

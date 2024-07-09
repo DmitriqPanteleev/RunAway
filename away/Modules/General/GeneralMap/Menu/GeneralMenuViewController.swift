@@ -18,12 +18,12 @@ final class GeneralMenuViewController: UIViewController {
         let buttonWidth = (view.bounds.width - 48) / 2
         
         let runButton = GeneralMenuButtonView(frame: .init(origin: .init(x: 16, y: .zero), size: .init(width: buttonWidth, height: 54)))
-        runButton.configure(title: "Бежать")
+        runButton.configure(title: .run)
         runButton.addTarget(self, action: #selector(runButtonTapped), for: .touchUpInside)
         view.addSubview(runButton)
         
         let profileButton = GeneralMenuButtonView(frame: .init(origin: .init(x: buttonWidth + 32, y: .zero), size: .init(width: buttonWidth, height: 54)))
-        profileButton.configure(title: "Профиль")
+        profileButton.configure(title: .run)
         profileButton.addTarget(self, action: #selector(profileButtonTapped), for: .touchUpInside)
         view.addSubview(profileButton)
     }
