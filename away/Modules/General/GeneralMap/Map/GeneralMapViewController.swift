@@ -12,10 +12,20 @@ import CoreLocation
 final class GeneralMapViewController: UIViewController {
     
     // MARK: Dependencies
-    private var locationManager: Locatable = LocationManager()
+    private var locationManager: Locatable
     
     // MARK: Views
     private lazy var mapView: GeneralMapRepresentable & GeneralMapControlable = GeneralMapView()
+    
+    // MARK: Inits
+    init(locationManager: Locatable) {
+        self.locationManager = locationManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

@@ -16,9 +16,13 @@ extension UIColor {
 enum ColorPalette: String {
     case primary
     case secondary
+    
+    case accentFirst
 }
 
 extension UIColor {
     static let primary = UIColor(name: .primary)
     static let secondary = UIColor(name: .secondary)
+    
+    static let accentFirst = UIColor(name: .accentFirst)
 }

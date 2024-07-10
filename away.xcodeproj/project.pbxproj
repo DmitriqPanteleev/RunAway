@@ -13,6 +13,9 @@
 		D0231FC62C3DBBCC00FC71A4 /* CommonLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FC52C3DBBCC00FC71A4 /* CommonLogger.swift */; };
 		D0231FC82C3DBFE400FC71A4 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FC72C3DBFE400FC71A4 /* DateFormatters.swift */; };
 		D0231FCB2C3DC14A00FC71A4 /* Recordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FCA2C3DC14A00FC71A4 /* Recordable.swift */; };
+		D0231FCF2C3DC52C00FC71A4 /* AccentColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FCE2C3DC52C00FC71A4 /* AccentColorManager.swift */; };
+		D0231FD22C3DC5CA00FC71A4 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FD12C3DC5CA00FC71A4 /* UserStorage.swift */; };
+		D0231FD72C3E8D4D00FC71A4 /* Locatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FD62C3E8D4D00FC71A4 /* Locatable.swift */; };
 		D02C88462C1DAF7F00682DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C88452C1DAF7F00682DA9 /* AppDelegate.swift */; };
 		D02C88482C1DAF7F00682DA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C88472C1DAF7F00682DA9 /* SceneDelegate.swift */; };
 		D02C884F2C1DAF8100682DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02C884E2C1DAF8100682DA9 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		D0231FC52C3DBBCC00FC71A4 /* CommonLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLogger.swift; sourceTree = "<group>"; };
 		D0231FC72C3DBFE400FC71A4 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		D0231FCA2C3DC14A00FC71A4 /* Recordable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordable.swift; sourceTree = "<group>"; };
+		D0231FCE2C3DC52C00FC71A4 /* AccentColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColorManager.swift; sourceTree = "<group>"; };
+		D0231FD12C3DC5CA00FC71A4 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		D0231FD62C3E8D4D00FC71A4 /* Locatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locatable.swift; sourceTree = "<group>"; };
 		D02C88422C1DAF7F00682DA9 /* away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02C88452C1DAF7F00682DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02C88472C1DAF7F00682DA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D0231FCC2C3DC16000FC71A4 /* Log */,
+				D0231FD52C3E8D3C00FC71A4 /* Location */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -112,6 +119,30 @@
 				D0231FCA2C3DC14A00FC71A4 /* Recordable.swift */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		D0231FCD2C3DC51900FC71A4 /* ColorManagment */ = {
+			isa = PBXGroup;
+			children = (
+				D0231FCE2C3DC52C00FC71A4 /* AccentColorManager.swift */,
+			);
+			path = ColorManagment;
+			sourceTree = "<group>";
+		};
+		D0231FD02C3DC5B800FC71A4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D0231FD12C3DC5CA00FC71A4 /* UserStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D0231FD52C3E8D3C00FC71A4 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				D0231FD62C3E8D4D00FC71A4 /* Locatable.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		D02C88392C1DAF7F00682DA9 = {
@@ -250,8 +281,10 @@
 			isa = PBXGroup;
 			children = (
 				D0231FC92C3DC13B00FC71A4 /* Protocols */,
+				D0231FCD2C3DC51900FC71A4 /* ColorManagment */,
 				D0231FC42C3DBB7500FC71A4 /* Log */,
 				D0D1CD882C1DBE3000A21FF2 /* Location */,
+				D0231FD02C3DC5B800FC71A4 /* Storage */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -362,6 +395,7 @@
 				D0231FC82C3DBFE400FC71A4 /* DateFormatters.swift in Sources */,
 				D07ADDD32C28A6B60002B79B /* GeneralMenuViewController.swift in Sources */,
 				D0231FCB2C3DC14A00FC71A4 /* Recordable.swift in Sources */,
+				D0231FCF2C3DC52C00FC71A4 /* AccentColorManager.swift in Sources */,
 				D07ADDDC2C28BF1A0002B79B /* Colors.swift in Sources */,
 				D01664762C3AA361002404EF /* Strings.swift in Sources */,
 				D04362812C288791005EFE6E /* Away+NotificationCenter.swift in Sources */,
@@ -370,8 +404,10 @@
 				D0D1CD7E2C1DB59C00A21FF2 /* UserAnnotationView.swift in Sources */,
 				D0D1CD7C2C1DB50D00A21FF2 /* GeneralMapView.swift in Sources */,
 				D0D1CD8B2C1DBE3F00A21FF2 /* LocationManager.swift in Sources */,
+				D0231FD72C3E8D4D00FC71A4 /* Locatable.swift in Sources */,
 				D07ADDD82C28A8F60002B79B /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 				D04362842C288818005EFE6E /* Typealiases.swift in Sources */,
+				D0231FD22C3DC5CA00FC71A4 /* UserStorage.swift in Sources */,
 				D02C88462C1DAF7F00682DA9 /* AppDelegate.swift in Sources */,
 				D0231FC32C3AA7E700FC71A4 /* String+Extensions.swift in Sources */,
 				D07ADDDA2C28AC470002B79B /* GeneralMenuButtonView.swift in Sources */,
@@ -521,6 +557,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = away/Configuration/away.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -560,6 +598,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = away/Configuration/away.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";

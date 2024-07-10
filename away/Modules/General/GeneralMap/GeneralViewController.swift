@@ -10,6 +10,19 @@ import CoreLocation
 
 final class GeneralViewController: UIViewController {
     
+    // MARK: Dependencies
+    private let locationManager: LocationManager
+    
+    // MARK: Inits
+    init(locationManager: LocationManager) {
+        self.locationManager = locationManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +33,7 @@ final class GeneralViewController: UIViewController {
 // MARK: - Setups
 private extension GeneralViewController {
     func setupChildControllers() {
-        let mapController = GeneralMapViewController()
+        let mapController = GeneralMapViewController(locationManager: locationManager)
         setupChildViewController(mapController) {
             mapController.view.translatesAutoresizingMaskIntoConstraints = false
             
